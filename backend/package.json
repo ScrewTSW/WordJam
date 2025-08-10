@@ -1,0 +1,28 @@
+{
+  "name": "wordjam-backend",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsc --watch & nodemon dist/server.js",
+    "build": "tsc -p .",
+    "lint": "eslint . --ext .ts,.js"
+  },
+  "dependencies": {
+    "async-mutex": "^0.4.0",
+    "axios": "^1.11.0",
+    "better-sqlite3": "^12.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lowdb": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.0.0"
+  }
+}

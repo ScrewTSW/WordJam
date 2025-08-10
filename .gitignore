@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Custom project ignores
+/backend/data
+/backend/dist
+/backend/node_modules
+/frontend/.next
+/frontend/node_modules

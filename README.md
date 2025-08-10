@@ -2,21 +2,52 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+1. **Create an Ollama Model**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+	Ensure you have [ollama](https://ollama.com/) installed and create/download the required model. For example:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+	```bash
+	ollama run llama3
+	# or your preferred model
+	```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Configure the Backend Model Name**
+
+	Edit the `MODEL_NAME` constant in `backend/server.ts` to match the model you want to use (e.g., `llama3`).
+
+3. **Start the Backend Server**
+
+	In the `backend` directory:
+
+	```bash
+	pnpm install
+	pnpm dev
+	# or
+	npm install
+	npm run dev
+	```
+
+	The backend will start on [http://localhost:4000](http://localhost:4000) by default.
+
+4. **Start the Frontend**
+
+	In the `frontend` directory:
+
+	```bash
+	pnpm install
+	pnpm dev
+	# or
+	npm install
+	npm run dev
+	```
+
+	The frontend will start on [http://localhost:3000](http://localhost:3000) by default.
+
+5. **Open the App**
+
+	Open [http://localhost:3000](http://localhost:3000) in your browser to use the app.
+
+You can start editing the page by modifying `frontend/src/app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
